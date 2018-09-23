@@ -1,0 +1,34 @@
+---
+title: Some Slider
+---
+extends layouts/_layout
+block content
+
+  div.slider(style='background: url("img/bg-slider.jpg")')
+    div.slider__wrap
+      -
+        let slider1 = [
+          {src: 'img/slide-1.png', alt: 'slider image'},
+          {src: 'img/slide-2.png', alt: 'slider image'},
+          {src: 'img/slide-1.png', alt: 'slider image'},
+          {src: 'img/slide-2.png', alt: 'slider image'},
+          {src: 'img/slide-1.png', alt: 'slider image'},
+          {src: 'img/slide-2.png', alt: 'slider image'},
+          {src: 'img/slide-2.png', alt: 'slider image'},
+          {src: 'img/slide-1.png', alt: 'slider image'},
+          {src: 'img/slide-2.png', alt: 'slider image'}
+        ]
+
+      div.slider__main
+
+        for item in slider1
+          a.slider__item
+            img.slider__image(src= item.src alt= item.alt)
+
+    div.slider__controls
+      div.slider__controls__prev
+        btn.slider__controls__btn.slider__controls__btn--prev назад
+      div.slider__controls__next
+        btn.slider__controls__btn.slider__controls__btn--next далі
+
+
